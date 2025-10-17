@@ -1,11 +1,11 @@
-# 🤖 CAPTCHA Solver API
+# 🚀 LLM Code Deployment System
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14-brightgreen)](https://nodejs.org)
 [![Express](https://img.shields.io/badge/express-v5.1.0-blue)](https://expressjs.com/)
 [![OpenAI](https://img.shields.io/badge/openai-v6.4.0-orange)](https://openai.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> An intelligent Express.js service that generates interactive web applications with CAPTCHA functionality, powered by OpenAI and GitHub automation.
+> An intelligent Express.js service that automatically builds, deploys, and updates web applications using LLM-assisted generation. The system handles the complete lifecycle from initial deployment to evaluation and revision, powered by OpenAI and GitHub automation.
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/nodejs.svg" alt="Node.js" width="50"/>
@@ -17,12 +17,23 @@
 
 ## ✨ Features
 
-- 🚀 **Express.js REST API** endpoint with robust error handling
-- 🔄 **GitHub Integration** for automated repository management
-- 🧠 **OpenAI Integration** for intelligent code generation
-- 🌐 **Automatic GitHub Pages** deployment
-- 🔒 **Secure Authentication** with shared secret
-- 📝 **Dynamic CAPTCHA** generation and verification
+### 🏗️ Build Phase
+- � **Request Verification** with secure authentication
+- 🤖 **LLM-Assisted Generation** for dynamic web applications
+- 🚀 **Automated Deployment** to GitHub Pages
+- 📊 **Evaluation API Integration** for automated feedback
+
+### 📋 Evaluation Phase
+- 🔍 **Static Code Analysis**
+- � **Dynamic Testing** with Playwright
+- 🧠 **LLM-Based Code Review**
+- � **Results Publishing**
+
+### 🔄 Revision Phase
+- 🛠️ **Intelligent Updates** based on feedback
+- 🌐 **Automatic Re-deployment**
+- 📝 **Metadata Management**
+- 🔗 **Evaluation API Integration**
 
 ## 📋 Prerequisites
 
