@@ -233,17 +233,25 @@ function parseFilesFromLLMOutput(output) {
   const regex = /^===\s*(.+?)\s*===\s*$/gm;
   let match;
   const positions = [];
+
   while ((match = regex.exec(output)) !== null) {
-    positions.push({ idx: match.index, filename: match[1].trim() });
+    positions.push({ idx: match.index, filename: match[1].trim(), fullMatch: match[0] });
   }
+
   for (let i = 0; i < positions.length; i++) {
-    const start = positions[i].idx + (`===${positions[i].filename}===`).length;
+    const start = positions[i].idx + positions[i].fullMatch.length;
     const end = (i + 1 < positions.length) ? positions[i + 1].idx : output.length;
-    const content = output.slice(start, end).trim();
+    let content = output.slice(start, end).trim();
+
+    // Remove any stray === or == from start of file
+    content = content.replace(/^=+\s*/, '');
+
     files.push({ path: positions[i].filename, content });
   }
+
   return files;
 }
+
 
 function escapeHtml(str) {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
